@@ -3,6 +3,15 @@ application/config/app-config.php
 application/config/database.php
 .env
 
+# Clés SSH / secrets (jamais dans le dépôt — garder sur le serveur uniquement)
+id_mbira
+id_mbira.pub
+id_rsa
+id_rsa.pub
+*.pem
+*.key
+*.ppk
+
 # Fichiers de cache
 application/cache/*
 temp/*
