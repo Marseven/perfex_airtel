@@ -1,0 +1,40 @@
+# Fichiers de configuration sensibles
+application/config/app-config.php
+application/config/database.php
+.env
+
+# Fichiers de cache
+application/cache/*
+temp/*
+uploads/*
+!uploads/index.html
+
+# Fichiers de logs
+*.log
+error_log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de session
+application/sessions/*
+
+# Fichiers de sauvegarde
+*.backup.*
+*.bak
+*.sql
+
+# Fichiers temporaires
+*.tmp
+*.swp
+*.swo
+
+# Fichiers IDE
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Fichiers de dépendances
+node_modules/
+vendor/
