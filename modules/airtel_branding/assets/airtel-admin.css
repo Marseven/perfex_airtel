@@ -220,6 +220,14 @@ table.dataTable thead .sorting_desc { color: var(--airtel-red); }
 }
 
 /* ---------- Écran de connexion admin --------------------------------------- */
+/* Fond BLANC sur toutes les pages d'authentification (login, mot de passe
+   oublié, réinitialisation, 2FA) — remplace le gris clair par défaut.        */
+body.login_admin,
+body.authentication,
+body.login {
+  background-color: #FFFFFF !important;
+}
+
 .login .panel-body .btn-info,
 .setup-menu-footer,
 body.login .btn-info {
