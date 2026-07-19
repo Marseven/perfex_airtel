@@ -98,11 +98,18 @@ a:hover, a:focus { color: var(--airtel-red-dark); }
   box-shadow: 0 0 0 1px rgba(228, 0, 0, .15) !important;
 }
 
-/* ---------- Écran de connexion client -------------------------------------- */
-body.login,
-.login-wrapper {
-  background: var(--airtel-gray-light);
+/* ---------- Écran de connexion client : fond BLANC ------------------------- */
+/* Le body du portail client est "customers" (pas de classe login dédiée) ;
+   on cible la page qui contient le formulaire de connexion via :has().       */
+html:has(.login-form),
+body.customers:has(.login-form),
+body.customers:has(.login-form) #wrapper,
+body.customers:has(.login-form) .content {
+  background-color: #FFFFFF !important;
 }
+/* Bouton de connexion en rouge Airtel */
+.login-form .btn-info,
+.login-form .btn-primary,
 .login .panel-body .btn-info,
 .login .btn-info {
   background-color: var(--airtel-red) !important;
