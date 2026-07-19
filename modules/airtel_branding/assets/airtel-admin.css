@@ -27,45 +27,84 @@
 }
 
 /* ---------- Barre latérale (menu principal) -------------------------------- */
+/* Fond ROUGE Airtel, texte BLANC. Contraste fort et lisible.                  */
 .sidebar,
 .sidebar .slimScrollDiv,
-#main-menu .sidebar-menu {
-  background: var(--airtel-dark) !important;
+.sidebar .slimScrollDiv > .sidebar,
+#main-menu .sidebar-menu,
+#side-menu,
+#setup-menu {
+  background: var(--airtel-red) !important;
 }
 
+/* Liens de menu : blanc sur rouge */
 .sidebar .nav > li > a,
 #side-menu li a,
 #side-menu li a i.menu-icon,
-#setup-menu li a {
-  color: #D5D7DB !important;
-}
-
-/* Survol d'un élément de menu */
-.sidebar .nav > li > a:hover,
-.sidebar .nav > li > a:focus,
-#side-menu li a:hover {
-  background: var(--airtel-dark-2) !important;
+#side-menu li a span,
+#setup-menu li a,
+#setup-menu li a i.menu-icon {
   color: #FFFFFF !important;
 }
 
-/* Élément de menu actif : liseré + fond rouge Airtel */
+/* Chevrons / flèches des sous-menus */
+.sidebar .nav > li > a .pull-right,
+#side-menu li a .arrow,
+#side-menu .fa-angle-left,
+#side-menu .fa-angle-down {
+  color: #FFFFFF !important;
+}
+
+/* Survol : rouge plus foncé, texte blanc */
+.sidebar .nav > li > a:hover,
+.sidebar .nav > li > a:focus,
+#side-menu li a:hover,
+#side-menu li a:focus,
+#setup-menu li a:hover {
+  background: var(--airtel-red-dark) !important;
+  color: #FFFFFF !important;
+}
+
+/* Élément ACTIF : pastille BLANCHE, texte ROUGE (rouge sur blanc) */
 .sidebar .nav > li.active > a,
 .sidebar .nav > li.active > a:hover,
 .sidebar .nav > li.active > a:focus,
-#side-menu li.active > a {
-  background: var(--airtel-red) !important;
-  color: #FFFFFF !important;
-  border-left: 3px solid #FFFFFF !important;
+#side-menu li.active > a,
+#setup-menu li.active > a {
+  background: #FFFFFF !important;
+  color: var(--airtel-red) !important;
+  border-left: 4px solid var(--airtel-dark) !important;
+  font-weight: 600 !important;
 }
 
 .sidebar .nav > li.active > a i.menu-icon,
-#side-menu li.active > a i.menu-icon {
-  color: #FFFFFF !important;
+.sidebar .nav > li.active > a span,
+#side-menu li.active > a i.menu-icon,
+#setup-menu li.active > a i.menu-icon {
+  color: var(--airtel-red) !important;
 }
 
-/* Sous-menus */
-.sidebar .nav > li .nav-second-level > li.active > a {
+/* Sous-menus (2e niveau) : rouge légèrement plus foncé pour se distinguer */
+.sidebar .nav > li .nav-second-level,
+#side-menu li .nav-second-level {
+  background: var(--airtel-red-dark) !important;
+}
+.sidebar .nav > li .nav-second-level > li > a,
+#side-menu li .nav-second-level > li > a {
+  color: #FFEAEA !important;
+}
+.sidebar .nav > li .nav-second-level > li > a:hover,
+.sidebar .nav > li .nav-second-level > li.active > a,
+#side-menu li .nav-second-level > li.active > a {
+  background: #FFFFFF !important;
   color: var(--airtel-red) !important;
+}
+
+/* En-tête de section du menu Configuration (ex. "Collaborateurs") */
+#setup-menu .menu-title,
+.sidebar .menu-title {
+  color: #FFD6D6 !important;
+  background: transparent !important;
 }
 
 /* ---------- Boutons : Perfex utilise .btn-info / .btn-primary comme action --- */

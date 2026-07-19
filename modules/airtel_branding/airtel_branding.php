@@ -5,13 +5,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /*
 Module Name: Airtel Branding
 Description: Applique la charte graphique Airtel Gabon (couleurs + logo) sur l'espace admin et l'espace client, sans modifier la structure des pages.
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 2.3.*
 Author: Airtel CarTracking
 */
 
 define('AIRTEL_BRANDING_MODULE_NAME', 'airtel_branding');
-define('AIRTEL_BRANDING_VERSION', '1.0.0');
+define('AIRTEL_BRANDING_VERSION', '1.0.1');
 
 /**
  * Activation : rien de destructif, tout passe par du CSS injecté.
