@@ -65,23 +65,26 @@
   color: #FFFFFF !important;
 }
 
-/* Élément ACTIF : pastille BLANCHE, texte ROUGE (rouge sur blanc) */
+/* Élément ACTIF : pastille BLANCHE, texte NOIR, liseré rouge Airtel */
 .sidebar .nav > li.active > a,
 .sidebar .nav > li.active > a:hover,
 .sidebar .nav > li.active > a:focus,
 #side-menu li.active > a,
 #setup-menu li.active > a {
   background: #FFFFFF !important;
-  color: var(--airtel-red) !important;
-  border-left: 4px solid var(--airtel-dark) !important;
+  color: #292C31 !important;
+  border-left: 4px solid var(--airtel-red) !important;
   font-weight: 600 !important;
 }
 
 .sidebar .nav > li.active > a i.menu-icon,
 .sidebar .nav > li.active > a span,
+.sidebar .nav > li.active > a .menu-text,
 #side-menu li.active > a i.menu-icon,
-#setup-menu li.active > a i.menu-icon {
-  color: var(--airtel-red) !important;
+#side-menu li.active > a .menu-text,
+#setup-menu li.active > a i.menu-icon,
+#setup-menu li.active > a .menu-text {
+  color: #292C31 !important;
 }
 
 /* Sous-menus (2e niveau) : rouge légèrement plus foncé pour se distinguer */
@@ -97,7 +100,25 @@
 .sidebar .nav > li .nav-second-level > li.active > a,
 #side-menu li .nav-second-level > li.active > a {
   background: #FFFFFF !important;
-  color: var(--airtel-red) !important;
+  color: #292C31 !important;
+}
+.sidebar .nav > li .nav-second-level > li.active > a .sub-menu-text,
+#side-menu li .nav-second-level > li.active > a .sub-menu-text {
+  color: #292C31 !important;
+}
+
+/* ---------- Carte utilisateur (profil) en haut de la sidebar ---------------- */
+/* Fond blanc conservé, texte forcé foncé et lisible quelle que soit la config. */
+.sidebar .sidebar-user-profile > a,
+.sidebar .sidebar-user-profile > a span {
+  color: #292C31 !important;
+}
+.sidebar .sidebar-user-profile > a .tw-text-sm {
+  color: #6B6E76 !important;
+}
+.sidebar .sidebar-user-profile > a:hover,
+.sidebar .sidebar-user-profile > a:focus {
+  background-color: #F2F2F3 !important;
 }
 
 /* En-tête de section du menu Configuration (ex. "Collaborateurs") */
