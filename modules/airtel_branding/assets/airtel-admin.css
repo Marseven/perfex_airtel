@@ -1,0 +1,178 @@
+/* ============================================================================
+   AIRTEL BRANDING — Espace ADMIN (back-office Perfex)
+   Charte Airtel Gabon : rouge #E40000 / anthracite #292C31 / violet #7C4D9E
+   Ne modifie que l'apparence (couleurs), pas la structure des pages.
+   ============================================================================ */
+
+:root {
+  --airtel-red:        #E40000; /* rouge CTA principal            */
+  --airtel-red-logo:   #ED1C24; /* rouge du logo                  */
+  --airtel-red-dark:   #C10000; /* survol / état pressé           */
+  --airtel-dark:       #292C31; /* anthracite (sidebar, headers)  */
+  --airtel-dark-2:     #1F2226; /* anthracite plus foncé          */
+  --airtel-purple:     #7C4D9E; /* accent secondaire              */
+  --airtel-gray:       #E8E8EB; /* bordures / fonds               */
+  --airtel-gray-light: #F6F6F6; /* fonds clairs                   */
+  --airtel-text:       #707070; /* texte secondaire               */
+}
+
+/* ---------- Logo Airtel (rouge) rendu en blanc sur la sidebar sombre -------- */
+/* Le logo fourni est monochrome rouge ; le filtre l'affiche en blanc sur fond
+   anthracite. Uploader le logo dans Configuration > Réglages > Entreprise. */
+.sidebar .logo img,
+#main-menu .logo img,
+.setup-menu-container .logo img,
+.navbar-header .logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* ---------- Barre latérale (menu principal) -------------------------------- */
+.sidebar,
+.sidebar .slimScrollDiv,
+#main-menu .sidebar-menu {
+  background: var(--airtel-dark) !important;
+}
+
+.sidebar .nav > li > a,
+#side-menu li a,
+#side-menu li a i.menu-icon,
+#setup-menu li a {
+  color: #D5D7DB !important;
+}
+
+/* Survol d'un élément de menu */
+.sidebar .nav > li > a:hover,
+.sidebar .nav > li > a:focus,
+#side-menu li a:hover {
+  background: var(--airtel-dark-2) !important;
+  color: #FFFFFF !important;
+}
+
+/* Élément de menu actif : liseré + fond rouge Airtel */
+.sidebar .nav > li.active > a,
+.sidebar .nav > li.active > a:hover,
+.sidebar .nav > li.active > a:focus,
+#side-menu li.active > a {
+  background: var(--airtel-red) !important;
+  color: #FFFFFF !important;
+  border-left: 3px solid #FFFFFF !important;
+}
+
+.sidebar .nav > li.active > a i.menu-icon,
+#side-menu li.active > a i.menu-icon {
+  color: #FFFFFF !important;
+}
+
+/* Sous-menus */
+.sidebar .nav > li .nav-second-level > li.active > a {
+  color: var(--airtel-red) !important;
+}
+
+/* ---------- Boutons : Perfex utilise .btn-info / .btn-primary comme action --- */
+.btn-info,
+.btn-primary,
+.bg-info,
+.panel-info > .panel-heading,
+.label-info,
+.badge-info,
+.progress-bar-info {
+  background-color: var(--airtel-red) !important;
+  border-color: var(--airtel-red) !important;
+  color: #FFFFFF !important;
+}
+
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active,
+.btn-info:active:hover, .open > .dropdown-toggle.btn-info,
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  background-color: var(--airtel-red-dark) !important;
+  border-color: var(--airtel-red-dark) !important;
+  color: #FFFFFF !important;
+}
+
+/* Boutons "outline" info -> rouge */
+.btn-outline.btn-info,
+.btn-info-outline {
+  background-color: transparent !important;
+  border-color: var(--airtel-red) !important;
+  color: var(--airtel-red) !important;
+}
+.btn-outline.btn-info:hover,
+.btn-info-outline:hover {
+  background-color: var(--airtel-red) !important;
+  color: #FFFFFF !important;
+}
+
+/* ---------- Liens et textes d'accent --------------------------------------- */
+a,
+.text-info,
+.text-primary,
+a.text-info:hover {
+  color: var(--airtel-red);
+}
+a:hover, a:focus {
+  color: var(--airtel-red-dark);
+}
+.text-info { color: var(--airtel-red) !important; }
+
+/* ---------- Onglets (nav-tabs) --------------------------------------------- */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.customtab > li.active > a {
+  border-top: 2px solid var(--airtel-red) !important;
+  color: var(--airtel-red) !important;
+}
+.nav-tabs > li > a:hover {
+  color: var(--airtel-red) !important;
+}
+
+/* ---------- Pagination / éléments actifs ----------------------------------- */
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span {
+  background-color: var(--airtel-red) !important;
+  border-color: var(--airtel-red) !important;
+}
+.pagination > li > a { color: var(--airtel-red); }
+
+/* ---------- Champs de formulaire : focus rouge ----------------------------- */
+.form-control:focus,
+.selectpicker:focus,
+.dt-toolbar input:focus {
+  border-color: var(--airtel-red) !important;
+  box-shadow: 0 0 0 1px rgba(228, 0, 0, .15) !important;
+}
+
+/* Cases à cocher / radios stylés Perfex */
+.checkbox input[type="checkbox"]:checked + label::before,
+.radio input[type="radio"]:checked + label::before {
+  background-color: var(--airtel-red) !important;
+  border-color: var(--airtel-red) !important;
+}
+
+/* ---------- En-têtes de tableaux / DataTables ------------------------------ */
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc { color: var(--airtel-red); }
+
+.table-responsive .table > thead > tr > th {
+  border-bottom: 2px solid var(--airtel-gray);
+}
+
+/* ---------- Écran de connexion admin --------------------------------------- */
+.login .panel-body .btn-info,
+.setup-menu-footer,
+body.login .btn-info {
+  background-color: var(--airtel-red) !important;
+  border-color: var(--airtel-red) !important;
+}
+
+/* Barre de progression / spinners Perfex */
+#pace .pace-progress { background: var(--airtel-red) !important; }
+
+/* Switches (interrupteurs) Perfex */
+.onoffswitch-inner:before { background-color: var(--airtel-red) !important; }
+.onoffswitch-label { border-color: var(--airtel-red) !important; }
+
+/* Menu de setup (roue crantée) */
+#setup-menu-wrapper .customizer-heading { color: var(--airtel-red) !important; }

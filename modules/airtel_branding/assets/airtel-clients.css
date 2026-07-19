@@ -1,0 +1,118 @@
+/* ============================================================================
+   AIRTEL BRANDING — Espace CLIENT (portail Perfex) + formulaires externes
+   Charte Airtel Gabon : rouge #E40000 / anthracite #292C31
+   ============================================================================ */
+
+:root {
+  --airtel-red:        #E40000;
+  --airtel-red-logo:   #ED1C24;
+  --airtel-red-dark:   #C10000;
+  --airtel-dark:       #292C31;
+  --airtel-purple:     #7C4D9E;
+  --airtel-gray:       #E8E8EB;
+  --airtel-gray-light: #F6F6F6;
+}
+
+/* ---------- Logo Airtel (rouge) rendu en blanc sur la navbar sombre --------- */
+.navbar-header .logo img,
+.navbar-brand img,
+.customers-navbar .logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* ---------- Barre de navigation supérieure --------------------------------- */
+.navbar-default,
+.customers-navbar,
+nav.navbar {
+  background-color: var(--airtel-dark) !important;
+  border-color: var(--airtel-dark) !important;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-text {
+  color: #E8E8EB !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #FFFFFF !important;
+  background-color: var(--airtel-red) !important;
+}
+
+/* ---------- Boutons d'action (dont "Payer avec Ebilling") ------------------ */
+.btn-info,
+.btn-primary,
+.bg-info,
+.label-info,
+.badge-info,
+.panel-info > .panel-heading {
+  background-color: var(--airtel-red) !important;
+  border-color: var(--airtel-red) !important;
+  color: #FFFFFF !important;
+}
+
+.btn-info:hover, .btn-info:focus, .btn-info:active,
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: var(--airtel-red-dark) !important;
+  border-color: var(--airtel-red-dark) !important;
+}
+
+/* Gros bouton de paiement mis en avant */
+.make-payment .btn,
+.invoice-payment .btn-info,
+a.btn.btn-info.btn-lg {
+  background-color: var(--airtel-red) !important;
+  border-color: var(--airtel-red) !important;
+  font-weight: 600;
+}
+
+/* ---------- Liens et accents ----------------------------------------------- */
+a,
+.text-info,
+.text-primary {
+  color: var(--airtel-red);
+}
+a:hover, a:focus { color: var(--airtel-red-dark); }
+.text-info { color: var(--airtel-red) !important; }
+
+/* ---------- Onglets / pagination ------------------------------------------- */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border-top: 2px solid var(--airtel-red) !important;
+  color: var(--airtel-red) !important;
+}
+.pagination > .active > a,
+.pagination > .active > span {
+  background-color: var(--airtel-red) !important;
+  border-color: var(--airtel-red) !important;
+}
+.pagination > li > a { color: var(--airtel-red); }
+
+/* ---------- Champs de formulaire : focus rouge ----------------------------- */
+.form-control:focus {
+  border-color: var(--airtel-red) !important;
+  box-shadow: 0 0 0 1px rgba(228, 0, 0, .15) !important;
+}
+
+/* ---------- Écran de connexion client -------------------------------------- */
+body.login,
+.login-wrapper {
+  background: var(--airtel-gray-light);
+}
+.login .panel-body .btn-info,
+.login .btn-info {
+  background-color: var(--airtel-red) !important;
+  border-color: var(--airtel-red) !important;
+}
+
+/* Liseré supérieur rouge sur les cartes de contenu */
+.panel-default > .panel-heading {
+  border-top: 2px solid var(--airtel-red);
+}
+
+/* Badges de statut de facture "Payée" en vert conservés, "Impayée" en rouge Airtel */
+.label-danger { background-color: var(--airtel-red) !important; }
