@@ -215,3 +215,14 @@ body.login .btn-info {
 
 /* Menu de setup (roue crantée) */
 #setup-menu-wrapper .customizer-heading { color: var(--airtel-red) !important; }
+
+/* ---------- Zone de contenu : fond bien BLANC ------------------------------ */
+/* Perfex met un gris clair par défaut sur la page ; on force le blanc.        */
+.admin,
+.admin #wrapper,
+.admin .content,
+#main-content,
+.page-wrapper,
+.horizontal-menu #wrapper {
+  background-color: #FFFFFF !important;
+}
